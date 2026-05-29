@@ -1,7 +1,7 @@
-[![GitHub stars](https://img.shields.io/github/stars/ajay1kumar1/fcc-ai-engineering-aws?color=blue&style=flat-square)](https://github.com/ajay1kumar1/fcc-ai-engineering-aws/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ajay1kumar1/fcc-ai-engineering-aws?color=green&style=flat-square)](https://github.com/ajay1kumar1/fcc-ai-engineering-aws/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/ajay1kumar1/fcc-ai-engineering-aws?color=red&style=flat-square)](https://github.com/ajay1kumar1/fcc-ai-engineering-aws/watchers)
-[![GitHub followers](https://img.shields.io/github/followers/ajay1kumar1?color=yellow&style=flat-square)](https://github.com/ajay1kumar1?tab=followers)
+[![GitHub stars](https://img.shields.io/github/stars/ajay1kumar1/rnd/fcc-ai-engineering-aws?color=blue&style=flat-square)](https://github.com/ajay1kumar1/rnd/fcc-ai-engineering-aws/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ajay1kumar1/rnd/fcc-ai-engineering-aws?color=green&style=flat-square)](https://github.com/ajay1kumar1/rnd/fcc-ai-engineering-aws/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/ajay1kumar1/rnd/fcc-ai-engineering-aws?color=red&style=flat-square)](https://github.com/ajay1kumar1/rnd/fcc-ai-engineering-aws/watchers)
+[![GitHub followers](https://img.shields.io/github/followers/ajay1kumar1/rnd?color=yellow&style=flat-square)](https://github.com/ajay1kumar1/rnd?tab=followers)
 
 
 ![Introduction](img/intro.png)
@@ -67,7 +67,7 @@ By the end of this course, you will be able to:
 
 1. **Clone & Setup**
    ```bash
-   git clone https://github.com/ajay1kumar1/fcc-ai-engineering-aws.git
+   git clone https://github.com/ajay1kumar1/rnd/fcc-ai-engineering-aws.git
 
    cd fcc-ai-engineering-aws
    ```
