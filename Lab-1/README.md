@@ -29,6 +29,15 @@ cp .env.example .env        # then edit .env and paste in your real key
 python3 main.py
 ```
 
+```bash
+OR
+cd /Users/ajaysingh/projects/rnd/Lab-1
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python test_agent_loop_offline.py 
+```
+
 `main.py` calls `load_dotenv()` on startup, so `.env` is picked up
 automatically — no need to `export` the key manually. You can still use
 `export ANTHROPIC_API_KEY=sk-ant-...` instead if you prefer; either way works.

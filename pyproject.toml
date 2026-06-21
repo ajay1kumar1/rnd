@@ -19,4 +19,5 @@ dependencies = [
 members = [
     "Deep-agents-With-Langchain",
     "stockapp",
+    "Lab-1",
 ]
