@@ -333,3 +333,49 @@ def make_executor(registry: dict):
         return fn(tool_input)
 
     return _executor
+
+
+def tool_classify_ticket(tool_input: dict) -> str:
+    """
+    Classify a support ticket into category, urgency, and recommended_action.
+    Accepts a dict with keys: ticket_text (str), fields_needed (list[str]).
+    Returns a JSON string with all three classification fields.
+    """
+    text = tool_input.get("ticket_text", "").lower()
+    fields_needed = tool_input.get("fields_needed", [])
+
+    # Determine category
+    if any(w in text for w in ["refund", "charged twice", "billing", "invoice"]):
+        category = "billing"
+    elif any(w in text for w in ["down", "outage", "can't log in", "cannot log in", "urgent"]):
+        category = "account_access"
+    elif any(w in text for w in ["how do i", "where is", "feature"]):
+        category = "how_to"
+    else:
+        category = "general"
+
+    # Determine urgency
+    if any(w in text for w in ["urgent", "immediately", "asap", "critical", "charged twice"]):
+        urgency = "high"
+    elif any(w in text for w in ["billing", "refund", "invoice", "account"]):
+        urgency = "medium"
+    else:
+        urgency = "low"
+
+    # Determine recommended_action (category checked before generic urgency)
+    if category == "billing":
+        recommended_action = "lookup_account_then_resolve"
+    elif category == "account_access" or urgency == "high":
+        recommended_action = "escalate_to_human"
+    elif category == "how_to":
+        recommended_action = "send_knowledge_base_link"
+    else:
+        recommended_action = "send_resolution"
+
+    result = {
+        "category": category,
+        "urgency": urgency,
+        "recommended_action": recommended_action,
+        "fields_confirmed": fields_needed,  # echo back which fields were resolved
+    }
+    return json.dumps(result)
