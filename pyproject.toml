@@ -20,4 +20,5 @@ members = [
     "Deep-agents-With-Langchain",
     "stockapp",
     "Lab-1",
+    "Production AI Agents with LangChain/langc-course",
 ]

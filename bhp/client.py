@@ -16,7 +16,7 @@ async def run_math_client():
     
     # 2. Use an AsyncExitStack to handle cross-process lifecycle cleaning
     async with AsyncExitStack() as stack:
-        print("[Client] Starting background math_server.py process...")
+        print("[Client] Starting background mathserver.py process...")
         
         # Connect to the server process standard input/output streams
         read_stream, write_stream = await stack.enter_async_context(

@@ -3,4 +3,6 @@ venv/
 Experian*
 */.env
 */.venv
+*/*/.env
+*/*/.venv
 */__*__
